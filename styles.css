@@ -11,12 +11,38 @@
 }
 #heading {
   padding-left: 0px;
-  padding-top: 0px;
+  padding-top: 2vh;
   padding-bottom: 0px;
   margin: 0;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
-  font-size: 400%;
+  font-size: 450%;
+}
+
+#contribute {
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 2.5vh;
+  margin: 0;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 200%;
+}
+
+#nav {
+  padding: 1vw;
+  margin: 0;
+  width: 100%;
+  height: 5vh;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 200%;
+  background-color: black;
+  color: white;
+}
+
+#nav a{
+  text-decoration: none;
+  padding: 1vw;
 }
 
 #heading.tp {
