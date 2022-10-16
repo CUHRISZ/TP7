@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300;600&display=swap');
+
+/* EVERYTHING IS REALLY UNORGANIZED BUT NEXT PROJECTS WILL BE */ 
+#cupcakes {
+  padding-bottom: 30px;
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: 20% 15%;
+  
+}
+#heading {
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 400%;
+}
+
+#heading.tp {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 250%;
+  padding: 1vw;
+}
+
+#heading.red {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 250%;
+  padding: 1vw;
+  color: red;
+
+}
+
+div {
+  display: inline-block; 
+  
+}
+h4 {
+  margin-bottom: 0;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
+}
+
+ul, ol {
+  margin-top: 0;
+  line-height: 150%;
+}
+
+li {
+  font-family: 'Roboto Slab', serif;
+}
+
+#directions ol li {
+  line-height: 200%;
+}
+
+#cakeingredients, #frostingingredients, #directions {
+  display-inline: block;
+  width: 30vw;
+  height: 80vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid;
+  vertical-align:top
+
+}
+#cakeingredients{ margin-left: 1.5vw; }
+#frostingingredients {
+  margin-top: 0px;
+}
+
+#directions {margin-bottom: 0;}
+
+.copyright {
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+}
+ 
+#cakeingredients ul, #frostingingredients ul, #directions ol {
+  display: none;
+}
+
+/* had to format like this due to the way I structured my HTML */
+
+#cakeingredients.show ul{
+  display: block;
+}
+#frostingingredients.show ul{
+  display: block;
+}
+#directions.show ol{
+  display: block;
+}
+footer {
+  background-color: black;
+}
+/*    -------   RESPONSIVE DESIGN    ---------       */
+
+@media screen and (orientation: portrait) {
+  
+  
+  #cakeingredients{ margin-left: 0; }
+  #directions {
+    display: block;
+    width: 90vw;
+    height: 80vh;
+    border: 2px solid;
+  }
+  #cakeingredients, #frostingingredients {
+    width: 90vw;
+    height: auto;
+  }
+  #directions {margin-bottom: 20vh;}
+  
+  footer {
+    text-align: center;
+  }
+
+  
+}
+
+@media only screen and (max-width: 575px) {
+  
+  background-color: grey;
+    footer {
+    position: fixed;
+  }
+  
+  
+  
+  
+}
