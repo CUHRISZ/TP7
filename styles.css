@@ -107,10 +107,6 @@ li {
   font-size: 12px;
   padding: 10px;
 }
- 
-#cakeingredients ul, #frostingingredients ul, #directions ol {
-  display: none;
-}
 
 /* had to format like this due to the way I structured my HTML */
 

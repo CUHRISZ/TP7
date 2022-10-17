@@ -23,35 +23,44 @@ function loadFileInto(fromFile, whereTo) {
 
 }
 
-
-
-window.onload = function() {
+//TP7 NEW REIPE OBJECT: when making recipe -> function = recipe -> pass information in order -> store them as variables within recipe
+//my website is a bit different in format         document.querySelector("#cupcake").innerHTML = this.image;
+function Recipe(recipeName, contributorName, imageURL, cakeURL, frostingURL, directionsURL) {
+  
+  this.recipeName = recipeName;
+  this.contributor = contributorName;
+  this.image = imageURL;
+  this.cake = cakeURL;
+  this.frosting = frostingURL;
+  this.directions = directionsURL;
+   
+  this.displayRecipe = function() {
     
-  document.querySelector("body").innerHTML += "<h4>Terrific red velvet cupcakes in 40 minutes!</h4>";
-  
-  document.querySelector("#heading").classList.add("tp");
-  // java uses css queryselector to find thing, and find classes attached, and add tp
-  
-  document.querySelector("#heading").onclick = function() {
-    this .classList.toggle("red");
+    document.querySelector("h1").innerHTML = this.recipeName; 
+    document.querySelector("#name").innerHTML = this.contributor; 
+    loadFileInto(this.cake, "#cakeingredients ul");
+    loadFileInto(this.frosting, "#frostingingredients ul");    
+    loadFileInto(this.directions, "#directions ol");    
+    
+    
   }
-  // java uses css queryselector to find thing and adds an onclick event which toggles the .red class
   
-  
-  // had to format like this due to HTML
-  document.querySelector("#cakeingredients").onclick = function() {
-    this .classList.toggle("show");
-  }
-  document.querySelector("#frostingingredients").onclick = function() {
-    this .classList.toggle("show");
-  }
-  document.querySelector("#directions").onclick = function() {
-    this .classList.toggle("show");
-  }  
-
-  loadFileInto("cakeingredients.html", "#cakeingredients ul");
-  loadFileInto("frostingingredients.html", "#frostingingredients ul");
-  loadFileInto("directions.html", "#directions ol");
 }
 
-// classlist.toggle -> toggles class
+RedVelvet = new Recipe("Red Velvet Cupcakes","Chris", " ", "cakeingredients.html","frostingingredients.html","directions.html");
+Tacodip = new Recipe("Taco dip","Camryn", " ", "tacoingredients.html","tacoequip.html","tacodir.html");
+Caramel = new Recipe("Caramel Flan","Bert", " ", "carmameling.html","caramelequip.html","carameldir.html");
+
+window.onload = function() {
+  
+  document.querySelector("#firstRecipe").onclick = function() {
+    RedVelvet.displayRecipe();
+  }
+  document.querySelector("#secondRecipe").onclick = function() {
+    Tacodip.displayRecipe();
+  }
+  document.querySelector("#thirdRecipe").onclick = function() {
+    Caramel.displayRecipe();
+  }
+  
+}
